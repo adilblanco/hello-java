@@ -6,9 +6,22 @@ pipeline {
         sh '''#Build Steps:
 echo "Compiling ... "
 javac HelloWorld.java
-echo "Execution ..."
+'''
+      }
+    }
+
+    stage('Compile') {
+      steps {
+        sh '''echo "Compiling ..."
+javac HelloWorld.java
+echo "============================"'''
+      }
+    }
+
+    stage('Deploy') {
+      steps {
+        sh '''echo "Deploying ... "
 java HelloWorld
-jar cvfe HelloWorld.jar HelloWorld *.class
 echo "============================"'''
       }
     }
