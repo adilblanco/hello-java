@@ -14,7 +14,7 @@ javac HelloWorld.java
       steps {
         sh '''echo "Compiling ..."
 javac HelloWorld.java
-echo "============================"'''
+'''
       }
     }
 
@@ -22,7 +22,7 @@ echo "============================"'''
       steps {
         sh '''echo "Deploying ... "
 java HelloWorld
-echo "============================"'''
+'''
       }
     }
 
